@@ -1,0 +1,73 @@
+{
+  "name": "RATH",
+  "title": "RATH RISC-V",
+  "version": "0.0.1",
+  "keywords": "risc-v, gd32v, HAL, RATH, Tequila",
+  "description": "RATH HAL platform",
+  "homepage": "https://www.uncertainty.cc/rath/rath-hal",
+  "license": "Apache-2.0",
+  "engines": {
+    "platformio": "<5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uncertainty-cc/PlatformIO-RATH.git"
+  },
+  "authors": [
+    {
+      "name": "RATH",
+      "email": "info@uncertainty.cc",
+      "url": "https://www.uncertainty.cc/rath"
+    }
+  ],
+  "packageRepositories": [
+    "http://dl.platformio.org/packages/manifest.json"
+  ],
+  "frameworks": {
+    "RATH-HAL": {
+      "package": "framework-rath-hal",
+      "script": "builder/frameworks/build_script.py",
+      "description": "A HAL(Hardware Abstraction Layer) library for RATH Robotics devices.",
+	  "url": "https://github.com/uncertainty-cc/PlatformIO-RATH-HAL",
+      "title": "RATH HAL SDK"
+    },
+    "gd32vf103-sdk": {
+      "package": "framework-gd32vf103-sdk",
+      "script": "builder/frameworks/firmware_library.py",
+      "description": "GigaDevice GD32VF103 Firmware Library (SDK) is a firmware function package, including programs, data structures and macro definitions, all the performance features of peripherals of GD32VF103 devices are involved in the package",
+      "url": "https://github.com/riscv-mcu/GD32VF103_Firmware_Library",
+      "title": "GigaDevice GD32V SDK"
+    }
+  },
+  "packages": {
+    "framework-gd32vf103-sdk": {
+      "optional": true,
+      "type": "framework",
+      "version": "~1.0.0"
+    },
+    "framework-rath-hal": {
+      "optional": true,
+      "type": "framework",
+      "version": "~0.0.1"
+    },
+    "tool-openocd-gd32v": {
+      "optional": true,
+      "type": "uploader",
+      "version": "~0.1.1"
+    },
+    "tool-gd32vflash": {
+      "type": "uploader",
+      "optional": true,
+      "version": "~0.1.0"
+    },
+    "toolchain-gd32v": {
+      "type": "toolchain",
+      "version": "~9.2.0"
+    },
+    "tool-dfuutil": {
+      "type": "uploader",
+      "optional": true,
+      "version": "~1.9.200310"
+    }
+  }
+}

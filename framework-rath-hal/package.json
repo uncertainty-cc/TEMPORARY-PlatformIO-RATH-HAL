@@ -1,0 +1,5 @@
+{
+    "name": "framework-rath-hal",
+    "description": "This is RATH HAL (Hardware Abstraction Layer) library",
+    "version": "0.0.1"
+}

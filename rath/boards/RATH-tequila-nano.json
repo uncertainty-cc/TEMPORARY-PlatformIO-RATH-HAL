@@ -1,0 +1,42 @@
+{
+    "build": {
+        "f_cpu": "108000000L",
+        "arduino": {
+            "ldscript": "GD32VF103xB.lds"
+        },
+        "gd32vf103-sdk": {
+            "ldscript": "GD32VF103xB.lds"
+        },
+        "RATH-HAL": {
+            "ldscript": "GD32VF103xB.lds"
+        },
+        "hwids": [
+            [
+                "0x28e9",
+                "0x0189"
+            ]
+        ],
+        "mabi": "ilp32",
+        "march": "rv32imac",
+        "mcmodel": "medlow",
+        "mcu": "GD32VF103CBT6",
+        "variant": "rath-tequila-nano",
+        "board_def": "BOARD_RATH_TEQUILA_NANO",
+        "hxtal_value": "8000000"
+    },
+    "debug":{
+        "svd_path": "GD32VF103.svd"
+    },
+    "frameworks": [
+        "gd32vf103-sdk",
+        "RATH-HAL"
+    ],
+    "name": "RATH Tequila Nano",
+    "upload": {
+        "maximum_ram_size": 32768,
+        "maximum_size": 131072,
+        "protocol": "serial"
+    },
+    "url": "https://www.uncertainty.cc/rath/boards/tequila-nano",
+    "vendor": "RATH"
+}
