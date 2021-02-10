@@ -61,6 +61,9 @@ class RathPlatform(PlatformBase):
                 }
             else:
                 openocd_interface = "ftdi/" + link
+                
+                if link == "ra-link":
+                    openocd_interface = "ftdi/ft2232"
 
                 server_args = [
                     "-s", "$PACKAGE_DIR/share/openocd/scripts",
